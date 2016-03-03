@@ -23,7 +23,7 @@ public class CrazyNumbersTest {
     }
 
     @Test
-    public void whenParameterIsEigthTeenThenDivBySix(){
+    public void whenParameterIsEightTeenThenDivBySix(){
         assertThat(crazynumbers.result(18),is(3));
     }
 
