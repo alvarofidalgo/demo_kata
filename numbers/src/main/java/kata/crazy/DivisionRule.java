@@ -14,7 +14,7 @@ public class DivisionRule {
     }
 
     public Function<Integer,Integer> rule  =(parameter) -> {
-        if (parameter==numberCheck)
+        if (parameter.equals(numberCheck))
            return parameter/numberDivision;
         return 0;
     };
