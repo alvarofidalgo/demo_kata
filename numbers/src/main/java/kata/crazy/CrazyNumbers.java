@@ -20,7 +20,7 @@ public class CrazyNumbers {
     public int result(int parameter) {
        return rules.stream()
                .reduce(0,
-                       (sum, rule) -> rule.apply(parameter),
+                       (sum, rule) -> sum + rule.apply(parameter),
                        Integer::sum);
 
     }
