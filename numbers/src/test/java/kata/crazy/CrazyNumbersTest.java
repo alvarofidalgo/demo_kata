@@ -14,18 +14,34 @@ public class CrazyNumbersTest {
 
     @Before
     public void setUp(){
-        crazynumbers = new CrazyNumbers();
+        crazynumbers = new CrazyNumbers(new RulesBuilder().getRules());
     }
 
     @Test
     public void whenParameterIsTenThenDivByTwo(){
-        assertThat(crazynumbers.result(10),is(5));
+        int number = 10;
+        int expected = 7;
+        assertThat(crazynumbers.result(number),is(expected));
     }
 
     @Test
     public void whenParameterIsEightTeenThenDivBySix(){
-        assertThat(crazynumbers.result(18),is(3));
+        int number = 18;
+        int expected = 3;
+        assertThat(crazynumbers.result(number),is(expected));
     }
 
+    @Test
+    public void whenParameterIsFourMultipleThenResultShouldBeNumberDivByTwo(){
+       int number = 4;
+       int expected = 2;
+       assertThat(crazynumbers.result(number),is(expected));
+    }
 
+    @Test
+    public void whenParameterIsTenMultipleThenResultShouldBeNumberDiv5(){
+        int number = 30;
+        int expected = 6;
+        assertThat(crazynumbers.result(number),is(expected));
+    }
 }

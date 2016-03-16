@@ -5,16 +5,21 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-
 public class DivisionRuleTest {
 
+    int divisibleNumber = 4;
+    int divisor = 2;
+    private DivisibleRule divisible = new DivisibleRule(divisibleNumber,divisor);
+
+
     @Test
-    public void whenParameterIsTen(){
-        Integer number = 10;
-        Integer divisor = 2;
-        Integer result = 5;
-        DivisionRule divisionRule = new DivisionRule(number,divisor);
-        assertThat(divisionRule.rule.apply(10), is(result));
+    public void whenNumberIsMultipleFourDivideByTwo(){
+        int number = 4;
+        int expected=2;
+        assertThat(divisible.rule().apply(number),is(expected));
+
     }
+
+
 
 }
