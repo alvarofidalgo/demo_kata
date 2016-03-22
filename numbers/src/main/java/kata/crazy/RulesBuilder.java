@@ -8,11 +8,13 @@ public class RulesBuilder {
 
     private List<Rule> rules = new ArrayList<>();
 
+
     public RulesBuilder(){
-        rules.add(new EqualsRule(10,2));
-        rules.add(new EqualsRule(18,6));
-        rules.add(new DivisibleRule(4,2));
-        rules.add(new DivisibleRule(10,5));
+        Integer two = 2,ten = 10, four = 4, five =5,six=6, eighteen =18;
+        rules.add(new EqualsRule(ten, two));
+        rules.add(new EqualsRule(eighteen,six));
+        rules.add(new DivisibleRule(four, two));
+        rules.add(new DivisibleRule(ten,five));
     }
 
     public List<Rule> getRules(){

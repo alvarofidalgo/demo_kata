@@ -13,7 +13,6 @@ public class CrazyNumbers {
        this.rules = rules;
     }
 
-
     public int result(int parameter) {
        return rules.stream()
                .reduce(0,
