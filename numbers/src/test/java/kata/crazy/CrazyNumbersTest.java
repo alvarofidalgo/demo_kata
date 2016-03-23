@@ -18,7 +18,7 @@ public class CrazyNumbersTest {
     }
 
     @Test
-    public void whenParameterIsTenThenDivByTwo(){
+    public void whenParameterIsTenThenDivByTwoSumWithDivByTwo(){
         int number = 10;
         int expected = 7;
         assertThat(crazynumbers.result(number),is(expected));
@@ -39,7 +39,7 @@ public class CrazyNumbersTest {
     }
 
     @Test
-    public void whenParameterIsTenMultipleThenResultShouldBeNumberDiv5(){
+    public void whenParameterIsTenMultipleThenResultShouldBeNumberDivFive(){
         int number = 30;
         int expected = 6;
         assertThat(crazynumbers.result(number),is(expected));

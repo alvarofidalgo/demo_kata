@@ -15,9 +15,10 @@ public class EqualsRule implements Rule {
 
     public Function<Integer,Integer> rule() {
        return (parameter) -> {
+            Integer result = 0;
             if (parameter.equals(numberCheck))
-                return parameter / numberDivision;
-            return 0;
+                result = parameter / numberDivision;
+            return result;
         };
     }
 }
